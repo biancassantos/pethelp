@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+/* --- GENERAL --- */
+main {
+  color: #4D2E1A;
+}
+
+.size {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.logo, .logo a {
+  font-family: "Patua One", system-ui;
+  text-transform: uppercase;
+}
+
+.pink-bg {
+  background-color: #FFDFD2;
+}
+
+.round-btn,
+input[type=submit] {
+  height: 40px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: 0;
+  background-color: #ED6847;
+  color: #FFF;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.round-btn:hover,
+input[type=submit]:hover,
+input[type=submit].yellow-btn:hover {
+  background-color: #CF3C1A;
+  color: #FFF;
+}
+
+/* --- HEADER --- */
+header {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1rem;
+  position: relative;
+}
+
+.header-logo a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #CF3C1A;
+}
+
+.desktop-menu ul {
+  display: flex;
+  gap: 1.4rem;
+  list-style: none;
+}
+
+.menu-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #4D2E1A;
+  padding: 3px 4px;
+  transition: .3s;
+}
+
+.menu-link:hover {
+  color: #ED6847;
+}
+
+.mobile-menu-btn {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+
+.mobile-menu-btn svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: absolute;
+  right: 0;
+  top: 3.8rem;
+  height: 0px;
+  width: 200px;
+  opacity: 0;
+  pointer-events: none;
+  list-style: none;
+  text-align: right;
+  padding: 1rem;
+  border-radius: 0 0 5px 5px;
+  background-color: #F7CFBF;
+  transition: .3s;
+}
+
+.mobile-menu.open {
+  height: 200px;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-menu ul {
+  list-style: none;
+}
+
+.mobile-menu ul li {
+  border-bottom: 1px solid #FFF;
+  padding: 10px 0px;
+}
+
+/* --- HERO --- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  height: 100vh;
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-top .hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-top .hero-text h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.hero-top .hero-text p {
+  max-width: 540px;
+}
+
+.hero-top .hero-text div,
+.hero-bottom  {
+  display: flex;
+  gap: 12px;
+}
+
+.hero-btn-outline {
+  background-color: transparent;
+  color: #ED6847;
+  border: 2px solid #ED6847;
+}
+
+.hero-top img {
+  max-width: 380px;
+}
+
+.span-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 120px;
+  font-size: 1.1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.span-card .span-number {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* --- ADOPT SECTION --- */
+.adopt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+}
+
+.adopt img {
+  max-width: 400px;
+}
+
+.adopt-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.adopt-text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #F89D4A;
+}
+
+.adopt-text p {
+  max-width: 500px;
+}
+
+.yellow-btn,
+input[type=submit].yellow-btn {
+  background-color: #F89D4A;
+}
+
+
+/* --- ABANDONMENT SECTION --- */
+.abandonment h2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* --- FOOTER --- */
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.footer-logo, .footer-icons a svg {
+  color: #D4D4D4;
+}
+
+.footer-icons a svg {
+  width: 23px;
+  height: 23px;
+  margin-left: 3px;
+  transition: .3s;
+}
+
+.footer-icons svg:hover {
+  color: #ED6847;
+}
+
+/* --- SCROLLBAR --- */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F7CFBF;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ED6847;
+}

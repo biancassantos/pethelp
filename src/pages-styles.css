@@ -1,0 +1,248 @@
+/* --- GENERAL --- */
+.hero-pages {
+  background-color: #F7F7F7;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero-pages h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.important {
+  color: #ED6847;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* --- FORMS --- */
+.form-container {
+  background-color: #F7F7F7;
+  padding: 2rem;
+  max-width: 570px;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5rem;
+}
+
+form div label {
+  display: block;
+  font-size: .8rem;
+  margin-bottom: 5px;
+}
+
+.radio-input label {
+  display: inline-block;
+  margin: 0 10px 0 4px;
+}
+
+form div input:not([type=radio]),
+input[type=search] {
+  width: 380px;
+  border: 1px solid #D4D4D4;
+  border-radius: 10px;
+  padding: 6px 8px;
+}
+
+form div select, textarea {
+  border: 1px solid #D4D4D4;
+  border-radius: 10px;
+  padding: 6px 8px;
+  width: 380px;
+  resize: none;
+}
+
+form input[type=submit] {
+  margin: 0 auto;
+}
+
+/* --- REQUEST RESCUE PAGE --- */
+.request-rescue-text {
+  margin-bottom: 3rem;
+}
+
+/* --- DONATE PAGE --- */
+.donate-page-body {
+  display: flex;
+  gap: 1rem;
+}
+
+.donate-page-body p {
+  max-width: 500px;
+}
+
+.donate-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.donate-btns {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  max-width: 270px;
+}
+
+.donate-btn {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  border: 2px solid #ED6847;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #ED6847;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.donate-btn:hover {
+  border: 2px solid #F7F7F7;
+}
+
+.donate-form label {
+  position: absolute;
+  top: 8.4rem;
+  left: 8px;
+}
+
+.donate-form input[type=text] {
+  width: 270px;
+  padding: 6px 8px 6px 20px;
+}
+
+/* --- ADOPTION PAGE --- */
+.adoption-page input[type=search] {
+  display: block;
+  margin: 0 auto 3rem auto;
+}
+
+.adoption-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem 1rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #D4D4D4;
+}
+
+.adoption-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pet-info {
+  display: flex;
+  gap: 2rem;
+}
+
+.pet-info h2 {
+  font-family: "Patua One", system-ui;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.pet-info ul {
+  list-style: none;
+}
+
+.pet-info img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 10px;
+}
+
+#show-text-link {
+  color: #F89D4A;
+  text-decoration: none;
+}
+
+.adoption-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.go-back {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #4D2E1A;
+  padding: 8px;
+  transition: .3s;
+}
+
+.go-back:hover {
+  color: #ED6847;
+}
+
+
+
+/* --- ABOUT PAGE --- */
+.about-page-text {
+  padding: 6rem 1rem;
+}
+
+.about-page-text p {
+  margin-bottom: 20px;
+}
+
+.about-page-img img {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* --- CONTACT PAGE --- */
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 6rem 1rem;
+}
+
+/* --- MESSAGE --- */
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+}
+
+.message h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.message p {
+  max-width: 500px;
+  text-align: center;
+}
+
+.message a {
+  margin-top: 1rem;
+  color: #ED6847;
+}
