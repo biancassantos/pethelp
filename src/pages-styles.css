@@ -24,6 +24,11 @@ strong {
   font-weight: 600;
 }
 
+.error {
+  color: red;
+  font-size: 13px;
+}
+
 /* --- FORMS --- */
 .form-container {
   background-color: #F7F7F7;

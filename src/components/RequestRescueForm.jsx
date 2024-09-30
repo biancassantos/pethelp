@@ -1,56 +1,68 @@
-import { useState } from "react";
+import { useForm } from 'react-hook-form';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from 'zod';
+
+const rescueSchema = z.object({
+  name: z.string().min(1, "Name is required."),
+  email: z.string().email(),
+  address: z.string().min(1, "Adress is required."),
+  species: z.string(),
+  situation: z.string(),
+  situationText: z.string().min(100, "Message must be at least 100 characters long.")
+})
 
 const RequestRescueForm = () => {
-  const [inputs, setInputs] = useState({
-    name: '',
-    email: '',
-    address: '',
-    species: 'dog',
-    situation: 'stray',
-    situationText: ''
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset
+  } = useForm({
+    resolver: zodResolver(rescueSchema)
   });
-
-  function handleChange(e) {
-    setInputs(({...inputs, [e.target.name]: e.target.value}))
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log(inputs)
-  }
+  
+  const onSubmit = async (data) => {
+    // submit to server
+    await new Promise((resolve) => setTimeout(resolve, 1000))
+    console.log(data)
+    reset();
+  };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <div>
         <label htmlFor="name">Your name</label>
         <input 
-        type="text" 
-        name="name" 
-        id="name" 
-        required 
-        onChange={handleChange} />
+        {...register("name")}
+        type="text"
+        id="name"
+        />
+        {errors.name && <p className='error'>{errors.name.message}</p>}
       </div>
       <div>
         <label htmlFor="email">E-mail</label>
         <input 
-        type="email" 
-        name="email" 
-        id="email" 
-        required 
-        onChange={handleChange} />
+        {...register("email")}
+        type="email"
+        id="email"
+        />
+        {errors.email && <p className='error'>{errors.email.message}</p>}
       </div>
       <div>
         <label htmlFor="address">Address of the rescue</label>
         <input 
-        type="text" 
-        name="address" 
-        id="address" 
-        required 
-        onChange={handleChange} />
+        {...register("address")}
+        type="text"
+        id="address"
+        />
+       {errors.address && <p className='error'>{errors.address.message}</p>}
       </div>
       <div>
         <label htmlFor="species">Species</label>
-        <select name="species" id="species" onChange={handleChange}>
+        <select 
+        {...register("species")}
+        id="species"
+        >
           <option value="dog">Dog</option>
           <option value="cat">Cat</option>
           <option value="other">Other</option>
@@ -60,33 +72,34 @@ const RequestRescueForm = () => {
         <label htmlFor="situation">Situation of the pet</label>
         <div className="radio-input">
           <input 
-          type="radio" 
-          name="situation" 
-          id="stray" 
-          value="stray" 
-          onChange={handleChange} />
+          {...register("situation")}
+          type="radio"
+          id="stray"
+          value="stray"
+          checked
+          />
           <label htmlFor="stray">Stray</label>
           <input 
-          type="radio" 
-          name="situation" 
-          id="hasOwners" 
-          value="hasOwners" 
-          onChange={handleChange} />
+          {...register("situation")}
+          type="radio"
+          id="hasOwners"
+          value="hasOwners"
+          />
           <label htmlFor="hasOwners">Has owners</label>
         </div>
       </div>
       <div>
         <label htmlFor="situationText">Tell us more about the situation</label>
         <textarea 
-        name="situationText" 
-        id="situationText" 
-        cols="30" rows="10" min="100" 
-        required 
-        placeholder="Describe the situation of the pet" 
-        onChange={handleChange}>
+        {...register("situationText")}
+        id="situationText"
+        cols="30" rows="10"
+        placeholder="Describe the situation of the pet"
+        >
         </textarea>
+        {errors.situationText && <p className='error'>{errors.situationText.message}</p>}
       </div>
-      <input type="submit" value="send request" />
+      <input type="submit" value={isSubmitting ? "sumbmitting..." : "send request"} disabled={isSubmitting} />
     </form>
   )
 }

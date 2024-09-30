@@ -1,4 +1,5 @@
 import RoundButton from "./ui/RoundButton";
+import heroImg from "../assets/hero.jpg";
 
 const HeroHome = () => {
   return (
@@ -13,7 +14,7 @@ const HeroHome = () => {
                 <RoundButton text="donate" src="/pethelp/donate" variant="hero-btn-outline" />
               </div>
             </article>
-            <img src="imgs/hero.jpg" alt="Illustration of two people and three pets" />
+            <img src={heroImg} alt="Illustration of two people and three pets" />
           </section>
           <div className="hero-bottom">
             <section className="span-card">

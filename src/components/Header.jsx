@@ -9,7 +9,9 @@ const Header = () => {
   return (
     <header>
       <div className="header-content size">
-        <span className="logo header-logo"><Link to="/pethelp">pethelp</Link></span>
+        <span className="logo header-logo">
+          <Link to="/pethelp" onClick={() => setOpenMenu(false)}>pethelp</Link>
+        </span>
         <nav className="desktop-menu">
           <ul>
             <li>
