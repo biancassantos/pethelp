@@ -243,6 +243,19 @@ input[type=submit].yellow-btn {
   word-break: break-all;
 }
 
+.abandonment p {
+  margin-bottom: 10px;
+}
+
+.abandonment h3 {
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.abandonment ul {
+  margin-left: 25px;
+}
+
 /* --- FOOTER --- */
 footer {
   display: flex;
