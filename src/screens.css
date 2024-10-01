@@ -1,9 +1,0 @@
-@media screen and (max-width: 520px) {
-  .desktop-menu {
-    display: none;
-  }
-
-  .mobile-menu-btn {
-    display: inline-block;
-  }
-}

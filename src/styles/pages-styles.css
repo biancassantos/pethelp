@@ -125,15 +125,15 @@ form input[type=submit] {
   border: 2px solid #F7F7F7;
 }
 
-.donate-form label {
-  position: absolute;
-  top: 8.4rem;
-  left: 8px;
+.donate-container form div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .donate-form input[type=text] {
   width: 270px;
-  padding: 6px 8px 6px 20px;
+  padding: 6px 8px;
 }
 
 /* --- ADOPTION PAGE --- */
@@ -202,8 +202,6 @@ form input[type=submit] {
   color: #ED6847;
 }
 
-
-
 /* --- ABOUT PAGE --- */
 .about-page-text {
   padding: 6rem 1rem;
@@ -211,6 +209,7 @@ form input[type=submit] {
 
 .about-page-text p {
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .about-page-img img {

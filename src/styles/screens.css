@@ -1,0 +1,91 @@
+@media screen and (max-width: 780px) {
+  .hero {
+    align-items: center;
+  }
+
+  .hero-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-top .hero-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .adopt {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .adopt img {
+    width: 70%;
+  }
+
+  .adopt-text {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .pet-info {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .adoption-card-top {
+    flex-direction: column;
+  }
+
+  .pet-info img {
+    max-width: 65%;
+    margin: 0 auto;
+  }
+}
+
+
+@media screen and (max-width: 520px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: inline-block;
+  }
+
+  .hero-top img {
+    max-width: 70%;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  form div input:not([type=radio]),
+  input[type=search],
+  form div select,
+  textarea {
+    width: 75vw;
+  }
+
+  .donate-page-body {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .donate-form input[type=text] {
+    width: 75vw;
+  }
+
+}
+
+@media screen and (max-width: 460px) {
+  .hero-top .hero-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-top .hero-text div {
+    justify-content: center;
+  }
+}
