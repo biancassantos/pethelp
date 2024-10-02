@@ -21,7 +21,7 @@ const Header = () => {
               <NavLink to="/pethelp/contact" className="menu-link">contact</NavLink>
             </li>
             <li>
-              <NavLink to="#" className="menu-link">photo gallery</NavLink>
+              <NavLink to="/pethelp/gallery" className="menu-link">photo gallery</NavLink>
             </li>
           </ul>
         </nav>

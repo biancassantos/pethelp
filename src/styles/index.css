@@ -92,6 +92,10 @@ header {
   color: #ED6847;
 }
 
+.menu-link.active {
+  color: #ED6847;
+}
+
 .mobile-menu-btn {
   width: 25px;
   height: 25px;
