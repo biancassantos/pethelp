@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from 'zod';
+import { useNavigate } from 'react-router-dom';
 
 const rescueSchema = z.object({
   name: z.string().min(1, "Name is required."),
@@ -20,12 +21,15 @@ const RequestRescueForm = () => {
   } = useForm({
     resolver: zodResolver(rescueSchema)
   });
+
+  const navigate = useNavigate();
   
   const onSubmit = async (data) => {
     // submit to server
     await new Promise((resolve) => setTimeout(resolve, 1000))
     console.log(data)
     reset();
+    navigate('/pethelp/request-rescue/confirmed');
   };
 
   return (

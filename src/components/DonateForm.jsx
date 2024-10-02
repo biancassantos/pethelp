@@ -1,10 +1,13 @@
 import { useState, useRef, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const DonateForm = () => {
   const [amount, setAmount] = useState(5);
   const [isCustom, setIsCustom] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const inputRef = useRef();
+  const navigate = useNavigate();
 
   function changeAmount(value) {
     if (value === 'custom') {
@@ -20,9 +23,12 @@ const DonateForm = () => {
     setAmount(Number(e.target.value));
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log(amount);
+    setIsSubmitting(true)
+    await new Promise((resolve) => setTimeout(resolve, 1000))
+    setIsSubmitting(false)
+    navigate('/pethelp/donate/confirmed');
   }
 
   useEffect(() => {
@@ -52,7 +58,10 @@ const DonateForm = () => {
           onChange={handleChange}
           disabled={isCustom ? false : true} />
         </div>
-        <input type="submit" value="donate" />
+        <input 
+        type="submit" 
+        value={isSubmitting ? "donating..." : "donate"} 
+        disabled={isSubmitting} />
       </form>
     </div>
   )
