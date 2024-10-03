@@ -16,7 +16,7 @@ const MobileMenu = ({ openMenu, setOpenMenu }) => {
             <Link to="/pethelp/contact" className="menu-link" onClick={closeMenu}>contact</Link>
           </li>
           <li>
-            <Link to="#" className="menu-link" onClick={closeMenu}>photo gallery</Link>
+            <Link to="/pethelp/gallery" className="menu-link" onClick={closeMenu}>photo gallery</Link>
           </li>
         </ul>
       </nav>
