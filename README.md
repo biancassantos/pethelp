@@ -1,8 +1,22 @@
-# React + Vite
+# Pethelp
+ 
+Olá, esse é um projeto de uma organização fictícia de resgate de animais em situação vulnerável.
+<a href="https://biancassantos.github.io/pethelp" target="_blank">Acesse aqui sua página.</a>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Design do projeto](https://raw.githubusercontent.com/biancassantos/pethelp/refs/heads/main/pethelp-design.png)
 
-Currently, two official plugins are available:
+**Tecnologias:**
+* HTML
+* CSS
+* JS
+* React (React Router Dom, React Hook Form, Zod, axios)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Imagens:**
+* De <a href="https://br.freepik.com/" target="_blank">Freepik</a>
+* De <a href="https://unsplash.com/pt-br" target="_blank">Unsplash</a>
+
+**APIs:**
+* <a href="https://dog.ceo/dog-api/" target="_blank">Dog API</a>
+
+**Text:**
+* ChatGPT
