@@ -9,7 +9,7 @@ const adoptSchema = z.object({
   name: z.string().min(1, "Name is required."),
   email: z.string().email(),
   address: z.string().min(1, "Adress is required."),
-  dob: z.string(),
+  age: z.string().refine((age) => Number(age) >= 18, {message: "You must be at least 18 to adopt."}),
   aboutApplicant: z.string().min(100, "Message must be at least 100 characters long.")
 })
 
@@ -74,12 +74,14 @@ const AdoptionForm = ({ id }) => {
         {errors.address && <p className='error'>{errors.address.message}</p>}
       </div>
       <div>
-        <label htmlFor="dob">Date of birth</label>
+        <label htmlFor="age">Age</label>
         <input 
-        {...register("dob")}
-        type="date"
-        id="dob"
+        {...register("age")}
+        type="number"
+        id="age"
+        min={0}
         />
+        {errors.age && <p className='error'>{errors.age.message}</p>}
       </div>
       <div>
         <label htmlFor="aboutApplicant">Tell us a bit more about yourself</label>
