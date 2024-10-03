@@ -226,6 +226,23 @@ form input[type=submit] {
   padding: 6rem 1rem;
 }
 
+/* --- PHOTO GALLERY --- */
+.photo-gallery {
+  columns: 5;
+  column-gap: 12px;
+}
+
+.img-container {
+  max-width: 200px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+
+.img-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
 /* --- MESSAGE --- */
 .message {
   display: flex;

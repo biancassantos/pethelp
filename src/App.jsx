@@ -10,12 +10,13 @@ import ContactPage from './pages/ContactPage';
 import ConfirmedRequest from './pages/ConfirmedRequest';
 import ConfirmedDonation from './pages/ConfirmedDonation';
 import ConfirmedApplication from './pages/ConfirmedApplication';
+import PhotoGalleryPage from './pages/PhotoGalleryPage';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/pethelp" element={<Layout />}>
+        <Route path="/pethelp" element={<Layout />} >
           <Route index element={<Homepage />}/>
           <Route path="/pethelp/request-rescue" element={<RequestRescuePage />} />
           <Route path="/pethelp/request-rescue/confirmed" element={<ConfirmedRequest />} />
@@ -26,6 +27,7 @@ function App() {
           <Route path="/pethelp/adopt/confirmed" element={<ConfirmedApplication />} />
           <Route path="/pethelp/about" element={<AboutPage />} />
           <Route path="/pethelp/contact" element={<ContactPage />} />
+          <Route path="/pethelp/gallery" element={<PhotoGalleryPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
