@@ -12,13 +12,14 @@ const PhotoGalleryPage = () => {
 
   return (
     <section className="photo-gallery size">
-      {petImages?.map((image, index) => {
+      {!petImages ? (<p>Loading...</p>) : 
+      (petImages.map((image, index) => {
         return (
         <div key={index} className="img-container">
           <img src={image} />
         </div>
       )
-      })}
+      }))}
     </section>
   )
 }
