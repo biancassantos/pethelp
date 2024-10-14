@@ -12,7 +12,7 @@ const PhotoGalleryPage = () => {
 
   return (
     <section className="photo-gallery size">
-      {!petImages ? (<p>Loading...</p>) : 
+      {!petImages ? (<p>Loading images...</p>) : 
       (petImages.map((image, index) => {
         return (
         <div key={index} className="img-container">
