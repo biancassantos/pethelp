@@ -1,25 +1,18 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import usePetImages from "../hooks/usePetImages";
 
 const PhotoGalleryPage = () => {
-  const [petImages, setPetImages] = useState(null);
-
-  useEffect(() => {
-    axios.get('https://dog.ceo/api/breeds/image/random/20')
-      .then((res) => setPetImages(res.data.message))
-      .catch(err => console.log(err))
-  }, [])
+  const { data: petImages, error, isLoading } = usePetImages();
 
   return (
     <section className="photo-gallery size">
-      {!petImages ? (<p>Loading images...</p>) : 
-      (petImages.map((image, index) => {
+      {error && <p>Something went wrong! Please try again.</p>}
+      {isLoading && <p>Loading images...</p>}
+      {petImages?.map((image, index) => {
         return (
         <div key={index} className="img-container">
           <img src={image} />
         </div>
-      )
-      }))}
+      )})}
     </section>
   )
 }
