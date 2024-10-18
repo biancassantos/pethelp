@@ -9,7 +9,7 @@ Olá, esse é um projeto de uma organização fictícia de resgate de animais em
 * HTML
 * CSS
 * JS
-* React (React Router Dom, React Hook Form, Zod, axios)
+* React (React Router Dom, React Hook Form, Zod, axios, Tanstack Query)
 
 **Imagens:**
 * De <a href="https://br.freepik.com/" target="_blank">Freepik</a>
