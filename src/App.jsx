@@ -9,6 +9,7 @@ import ConfirmedRequest from './pages/ConfirmedRequest';
 import ConfirmedDonation from './pages/ConfirmedDonation';
 import ConfirmedApplication from './pages/ConfirmedApplication';
 import ErrorPage from './pages/ErrorPage';
+import Spinner from './components/ui/Spinner';
 const RequestRescuePage = lazy(() => import('./pages/RequestRescuePage'))
 const AdoptPage = lazy(() => import('./pages/AdoptPage'));
 const AdoptionFormPage = lazy(() => import('./pages/AdoptionFormPage'));
@@ -21,7 +22,7 @@ function App() {
           <Route path="/pethelp" element={<Layout />}>
             <Route index element={<Homepage />}/>
             <Route path="/pethelp/request-rescue" element={
-              <Suspense fallback={<h2>Loading...</h2>}>
+              <Suspense fallback={<Spinner />}>
                 <RequestRescuePage />
               </Suspense>}
             />
@@ -29,12 +30,12 @@ function App() {
             <Route path="/pethelp/donate" element={<DonatePage />} />
             <Route path="/pethelp/donate/confirmed" element={<ConfirmedDonation />} />
             <Route path="/pethelp/adopt" element={
-              <Suspense fallback={<h2>Loading...</h2>}>
+              <Suspense fallback={<Spinner />}>
                 <AdoptPage />
               </Suspense>}
             />
             <Route path="/pethelp/adopt/:id" element={
-              <Suspense fallback={<h2>Loading...</h2>}>
+              <Suspense fallback={<Spinner />}>
                 <AdoptionFormPage />
               </Suspense>}
             />
@@ -42,7 +43,7 @@ function App() {
             <Route path="/pethelp/about" element={<AboutPage />} />
             <Route path="/pethelp/contact" element={<ContactPage />} />
             <Route path="/pethelp/gallery" element={
-              <Suspense fallback={<h2>Loading...</h2>}>
+              <Suspense fallback={<Spinner />}>
                 <PhotoGalleryPage />
               </Suspense>}
             />

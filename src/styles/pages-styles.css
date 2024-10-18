@@ -243,6 +243,24 @@ form input[type=submit] {
   border-radius: 10px;
 }
 
+/* --- SPINNER --- */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  height: 100vh;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  border: 13px solid #D4D4D4;
+  border-top-color: #ED6847;
+  border-radius: 50%;
+  animation: loading .75s ease infinite;
+}
+
 /* --- MESSAGE --- */
 .message {
   display: flex;
@@ -268,4 +286,9 @@ form input[type=submit] {
 .message a {
   margin-top: 1rem;
   color: #ED6847;
+}
+
+@keyframes loading {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
 }
