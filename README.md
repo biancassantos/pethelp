@@ -9,6 +9,9 @@ Olá, esse é um projeto de uma organização fictícia de resgate de animais em
 - Aplicar para a adoção de um pet
 - Navegar pela galeria de fotos
 
+### Objetivos:
+- Praticar pela primeira vez meus conhecimentos em React Hook Form, Zod e Tanstack Query.
+
 ### Links:
 - <a href="https://biancassantos.github.io/pethelp" target="_blank">Deploy do projeto</a>
 
