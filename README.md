@@ -13,7 +13,7 @@ Olá, esse é um projeto de uma organização fictícia de resgate de animais em
 - Praticar pela primeira vez meus conhecimentos em React Hook Form, Zod e Tanstack Query.
 
 ### Links:
-- <a href="https://biancassantos.github.io/pethelp" target="_blank">Deploy do projeto</a>
+- <a href="https://biancassantos.github.io/pethelp" target="_blank">Página do projeto</a>
 
 </br>
 
