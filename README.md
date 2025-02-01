@@ -1,7 +1,7 @@
 # Pethelp
 
 ## 📄 Sobre
-Olá, esse é um projeto de uma organização fictícia de resgate de animais em situação vulnerável.
+Olá, esse projeto é um site de uma organização fictícia de resgate de animais em situação vulnerável.
 
 ### Funcionalidades:
 - Realizar um pedido de resgate
@@ -23,6 +23,7 @@ Olá, esse é um projeto de uma organização fictícia de resgate de animais em
 ### Tecnologias:
 - HTML
 - CSS
+- JavaScript
 - React (React Router Dom, React Hook Form, Zod, axios, Tanstack Query)
 
 ### APIs:
