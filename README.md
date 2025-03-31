@@ -21,10 +21,18 @@ Olá, esse projeto é um site de uma organização fictícia de resgate de anima
 
 ## 🔎 Especificações
 ### Tecnologias:
-- HTML
-- CSS
+- React
 - JavaScript
-- React (React Router Dom, React Hook Form, Zod, axios, Tanstack Query)
+- CSS
+- JSX
+
+### Dependências:
+- React Router Dom
+- React Hook Form
+- Zod
+- axios
+- Tanstack Query
+- React Icons
 
 ### APIs:
 - <a href="https://dog.ceo/dog-api/" target="_blank">Dog API</a>
